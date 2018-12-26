@@ -1,31 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="container d-flex w-100 h-100 mx-auto flex-column"> 
+    <external-css/>
+    <header class="mb-4">
+      <nav-bar/>
+    </header>
+    <main>
+      <router-view/>
+    </main>
+    <footer class="mt-auto  text-center">
+      <p>Koisoft SPA &copy; 2018 </p>
+    </footer>
+    <external-js/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+import ExternalCss from './components/ExternalCss.vue'
+import ExternalJs from './components/ExternalJs.vue'
+import NavBar from './components/NavBar.vue'
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/main.css'
+
+export default {
+  components: {
+    ExternalCss,
+    NavBar,
+    ExternalJs
+  }
 }
-</style>
+</script>
