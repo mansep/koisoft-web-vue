@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-      <div class="col-8">
+      <div class="col-lg-8 col-sm-12">
           <h1>Contact</h1>
           <form class="pt-3">
             <div class="form-group">
@@ -29,13 +29,13 @@
             </div>
           </form>
       </div>
-      <div class="col-4">        
+      <div class="col-lg-4 col-sm-12">        
           <h1>Info</h1>
           <div class="pt-3">
             <p><i class="fas fa-map-marker-alt"/> <span class="pl-3">Camino correntoso KM 5.1, Puerto Montt, Chile</span></p>
             <p><i class="fas fa-phone"/> <span class="pl-3">+56 12 3456789 </span></p>
             <p><i class="far fa-envelope"/> <span class="pl-3">hello@koisoft.cl</span></p>
-            <google-map  name="example" lat="-41.4683807" lng="-72.9456145"/>
+            <google-map name="example" lat="-41.4683807" lng="-72.9456145"/>
           </div>
       </div>
     </div>

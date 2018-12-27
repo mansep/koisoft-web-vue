@@ -10,14 +10,12 @@
     <footer class="mt-auto  text-center">
       <p>Koisoft SPA &copy; 2018 </p>
     </footer>
-    <external-js/>
   </div>
 </template>
 
 <script>
 
 import ExternalCss from './components/ExternalCss.vue'
-import ExternalJs from './components/ExternalJs.vue'
 import NavBar from './components/NavBar.vue'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -27,7 +25,6 @@ export default {
   components: {
     ExternalCss,
     NavBar,
-    ExternalJs
   }
 }
 </script>

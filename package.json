@@ -13,7 +13,8 @@
     "popper.js": "^1.14.6",
     "save": "^2.3.3",
     "vue": "^2.5.21",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.10.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
