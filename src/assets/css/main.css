@@ -13,6 +13,9 @@ a:hover{
 a:hover{
     border-bottom: .15rem solid #0e6655 ;
 }
+.router-link-exact-active{
+    border-bottom: .15rem solid #0e6655 ;
+}
 
 .logo{
     font-size: 3em;
