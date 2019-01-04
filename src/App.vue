@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container d-flex w-100 h-100 mx-auto flex-column"> 
-    <external-css/>
     <header class="mb-4">
       <nav-bar/>
     </header>
@@ -15,7 +14,6 @@
 
 <script>
 
-import ExternalCss from './components/ExternalCss.vue'
 import NavBar from './components/NavBar.vue'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -23,7 +21,6 @@ import './assets/css/main.css'
 
 export default {
   components: {
-    ExternalCss,
     NavBar,
   }
 }

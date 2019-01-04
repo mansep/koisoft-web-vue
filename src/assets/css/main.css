@@ -29,3 +29,49 @@ a:hover{
     float: right;
     font-size: 1.1em;
 }
+
+.carousel {
+    margin-bottom: 2rem;
+  }
+  
+  .carousel-caption {
+    color: #000 !important;
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-item {
+    height: 30rem;
+    background-color: #ffffff;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 30rem;
+ }
+ .carousel-indicators .active {
+    background-color: #273746;
+ }
+ .carousel-indicators li {
+    background-color: #abb2b9;
+ }
+ .carousel-control-next, .carousel-control-prev {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #abb2b9;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: #273746;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
+ @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+}
