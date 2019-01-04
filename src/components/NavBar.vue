@@ -1,11 +1,18 @@
 <template id="tplNav">
-    <div>
-        <div class="logo">&gt;&lt;&gt;</div>
-        <nav class="nav">
-            <router-link class="nav-link active" to="/">Home</router-link>
-            <router-link class="nav-link" to="/about">About</router-link>
-            <router-link class="nav-link" to="/contact">Contact</router-link>
-        </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 text-center">
+                <div class="logo">&gt;&lt;&gt;</div>
+            </div>
+            <div class="col-lg-8 col-sm-12 text-center">
+                <nav class="nav">
+                    <router-link class="nav-link active" to="/">Home</router-link>
+                    <router-link class="nav-link" to="/services">Services</router-link>
+                    <router-link class="nav-link" to="/about">About</router-link>
+                    <router-link class="nav-link" to="/contact">Contact</router-link>
+                </nav>
+            </div>
+        </div>
     </div>
 </template>
 <script>

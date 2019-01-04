@@ -1,12 +1,7 @@
 body,html{
     font-family: 'Dosis', sans-serif;
     height: 100%;
-    background: 
-        -webkit-linear-gradient(110deg, #FFF 60%, rgba(0, 0, 0, 0) 50%),
-        -webkit-linear-gradient(250deg, #FFF 60%, rgba(0, 0, 0, 0) 50%);
-
     background-color: rgba(250, 250, 250, 50);
-
 }
 a,
 a:focus,
@@ -16,7 +11,7 @@ a:hover{
 }
 
 a:hover{
-    border-bottom: .15rem solid #000;
+    border-bottom: .15rem solid #0e6655 ;
 }
 
 .logo{
@@ -30,34 +25,30 @@ a:hover{
     font-size: 1.1em;
 }
 
-.carousel {
-    margin-bottom: 2rem;
-  }
-  
-  .carousel-caption {
+.carousel-caption {
     color: #000 !important;
-    bottom: 3rem;
+    top: 6rem;
     z-index: 10;
-  }
+}
   
-  .carousel-item {
-    height: 30rem;
-    background-color: #ffffff;
-  }
-  .carousel-item > img {
+.carousel-item {
+    height: 35rem;
+    background-color: rgba(250, 250, 250, 50);
+}
+.carousel-item > img {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
-    height: 30rem;
- }
- .carousel-indicators .active {
+    min-height: 100%;
+}
+.carousel-indicators .active {
     background-color: #273746;
- }
- .carousel-indicators li {
+}
+.carousel-indicators li {
     background-color: #abb2b9;
- }
- .carousel-control-next, .carousel-control-prev {
+}
+.carousel-control-next, .carousel-control-prev {
     font-size: 3rem;
     font-weight: bold;
     color: #abb2b9;
@@ -67,11 +58,55 @@ a:hover{
     text-decoration: none;
     outline: 0;
     opacity: .9;
+    border-bottom: 0px; 
 }
- @media (min-width: 40em) {
+
+
+@media (max-width: 450px) {
+    .nav {
+        width: 100%;
+        margin-top: 0px;
+        float: none;
+        font-size: 1em;    
+    }
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .carousel-caption {
+        top: 1rem;
+    }
+}
+ @media (min-width: 450px) {
     .carousel-caption p {
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
       line-height: 1.4;
+      
     }
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary{
+    background-color: #0e6655;
+    border-color: #0e6655;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #117a65;
+}
+.btn-outline-primary{
+    border-color: #117a65;
+    color: #117a65;
+}
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
+    background-color: #117a65;
+    border-color: #0e6655;
 }
