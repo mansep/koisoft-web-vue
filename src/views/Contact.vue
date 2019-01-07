@@ -39,20 +39,21 @@
             </form>
         </div>
         <div class="col-lg-4 col-sm-12">  
-          <p><i class="fas fa-map-marker-alt"/> <span class="pl-3">Camino correntoso KM 5.1, Puerto Montt, Chile</span></p>
-          <p><i class="fas fa-phone"/> <span class="pl-3">+56 12 3456789 </span></p>
-          <p><i class="far fa-envelope"/> <span class="pl-3">hello@koisoft.cl</span></p>
+          <p><i class="fas fa-map-marker-alt"/> <span class="pl-3">{{ settings.address }}</span></p>
+          <p><i class="fas fa-phone"/> <span class="pl-3"> {{ settings.phone }} </span></p>
+          <p><i class="far fa-envelope"/> <span class="pl-3"> {{ settings.email }}</span></p>
           <google-map />
         </div>
       </div>
+      <v-dialog/>
     </div>
 </template>
 
 <script>
 
+import Settings from '../settings';
 import GoogleMap from '../components/GoogleMap.vue';
-import smtp from '../assets/js/smtp.js';
-
+ 
 export default {
   components: {
     GoogleMap
@@ -63,10 +64,23 @@ export default {
       company: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
+      settings: Settings
     };
   },
   methods: {
+    dialog: function(title, message){
+      this.$modal.show('dialog', {
+        title: title,
+        text: message,
+        buttons: [
+          {
+            title: 'Close',
+            default: true
+          }
+      ]
+      })
+    },
     sendContact: function(event){
 
       var body =  "Name: " + this.name + "<br/>"
@@ -75,16 +89,25 @@ export default {
       body + "Email: " + this.email + "<br/>"
       body + "Message: " + this.message;
 
-
-      smtp.send({
-          To : 'hello@koisoft.cl',
+      var email = {
+          To : Settings.email,
           From : this.email,
           Subject : "WEB CONTACT - " + this.subject,
           Body : body
+      }
+
+      var ejson = JSON.stringify(email);
+      fetch(Settings.email_api_url, {
+          method: 'POST',
+          body: ejson,
+          headers:{
+            "Content-Type": "application/x-www-form-urlencoded"
+          }
       }).then(response => {
         console.log(response.json());
       }).catch(error =>{
         console.log(error);
+        this.dialog("Sorry!", "Error when sending mail: " + error.message);
       });
 
       event.preventDefault();
