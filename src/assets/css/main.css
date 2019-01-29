@@ -1,7 +1,7 @@
 body,html{
     font-family: 'Dosis', sans-serif;
     height: 100%;
-    background-color: rgba(250, 250, 250, 50);
+    background-color: #FFF; /* rgba(250, 250, 250, 50); */
 }
 a,
 a:focus,
@@ -9,21 +9,24 @@ a:hover{
     color: #000000;
     text-decoration: none;
 }
-
+main{
+    background-color: rgba(250, 250, 250, 50);
+}
 a:hover{
-    border-bottom: .15rem solid #0e6655 ;
+    border-bottom: .15rem solid #ef9402 ;
 }
 .router-link-exact-active{
-    border-bottom: .15rem solid #0e6655 ;
+    border-bottom: .15rem solid #ef9402 ;
 }
 
 .logo{
-    margin-top: 20px;
+    margin-top: 14px;
     font-weight: bold;
     float: left;
 }
-.nav{
-    margin-top: 15px;
+.nav{    
+    margin-top: 12px;
+    margin-bottom: 5px;
     float: right;
     font-size: 1.1em;
 }
@@ -103,19 +106,19 @@ hr {
 }
 
 .btn-primary{
-    background-color: #0e6655;
-    border-color: #0e6655;
+    background-color: #ef9402;
+    border-color: #ef9402;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #117a65;
+    background-color: #F1592A;
 }
 .btn-outline-primary{
-    border-color: #117a65;
-    color: #117a65;
+    border-color: #F1592A;
+    color: #F1592A;
 }
 .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
-    background-color: #117a65;
-    border-color: #0e6655;
+    background-color: #F1592A;
+    border-color: #ef9402;
 }
 .vue-dialog .dialog-content {
     font-size: 18px !important;

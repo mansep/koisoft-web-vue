@@ -7,11 +7,11 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-md-7">
+        <div class="col-md-8">
           <h2>Lorem Ipsum. <span class="text-muted">Solor sit emet.</span></h2>
           <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit turpis, egestas sed placerat hac aliquam netus dictum, mattis sollicitudin at sociis consequat nibh volutpat. Torquent blandit inceptos enim lectus purus curae natoque, molestie malesuada egestas risus at interdum nisl vulputate, sociis condimentum nullam accumsan ac nostra. Facilisi nam nisl ad vehicula ornare, lectus eget bibendum sodales habitasse, lacinia auctor vitae consequat.</p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
           <img class="img-fluid mx-auto" src="../assets/img/about.png" data-holder-rendered="true">
         </div>
       </div>
