@@ -1,6 +1,6 @@
 const Settings = {
     title: "Koisoft Software developers",
-    name: "Koisoft",
+    name: "Koisoft SPA",
     email: "hello@koisoft.cl",
     phone: "+569 1123 4567",
     facebook: "https://fb.com/koisoft",

@@ -40,8 +40,10 @@
         </div>
         <div class="col-lg-4 col-sm-12">  
           <p><i class="fas fa-map-marker-alt"/> <span class="pl-3">{{ settings.address }}</span></p>
-          <p><i class="fas fa-phone"/> <span class="pl-3"> {{ settings.phone }} </span></p>
-          <p><i class="far fa-envelope"/> <span class="pl-3"> {{ settings.email }}</span></p>
+          <p><i class="fas fa-phone"/> <span class="pl-3"> <a v-bind:href="['tel:' + settings.phone]"> {{ settings.phone }} </a></span></p>
+          <p><i class="far fa-envelope"/> <span class="pl-3"> <a v-bind:href="['mailto:' + settings.email]"> {{ settings.email }}</a></span></p>
+          <p><i class="fab fa-facebook-square"/> <span class="pl-3"> <a v-bind:href=settings.facebook > {{ settings.facebook }}</a></span></p>
+          <p><i class="fab fa-twitter-square"/> <span class="pl-3"> <a v-bind:href=settings.twitter > {{ settings.twitter }}</a></span></p>
           <google-map />
         </div>
       </div>
